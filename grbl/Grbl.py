@@ -52,7 +52,7 @@ class Grbl:
         multiline [true]: Read multiple lines.
         timeout [-1]: Specify alternative timeout.
         """
-        if timeout is not -1:
+        if timeout != -1:
             old_timeout = self.serial.timeout
             self.serial.timeout = timeout
         if multiline:
@@ -61,7 +61,7 @@ class Grbl:
             return responses
         else:
             responses = self.serial.readline().decode().strip()
-        if timeout is not -1:
+        if timeout != -1:
             self.serial.timeout = old_timeout
         return responses
 
