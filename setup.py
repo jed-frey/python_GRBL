@@ -3,8 +3,6 @@ import os
 
 import setuptools
 
-import versioneer
-
 LOCAL_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -28,8 +26,7 @@ requirements = read_requirements()
 test_requirements = read_requirements(path="requirements_test.txt")
 
 setuptools.setup(
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
+    version="0.0.24",
     name="grbl",
     description="Python module to control Grbl CNC Firmware.",
     author="Jed",
